@@ -1,43 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon"
+    href="data:image/png;base64,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" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  <title>Amazon Clone</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+
+</body>
+
 </html>
